@@ -1,0 +1,12 @@
+{% extends "./base.html.twig" %}
+{% block body %}
+    <h1>The page you are looking for could not be found</h1>
+    {{ status_text }}{{ status_code }}
+
+    <br>
+
+    <p>
+        Check for any URL misspelling or <a href="{{ path('blog_list') }}"> return to the homepage</a>
+    </p>
+
+{% endblock %}

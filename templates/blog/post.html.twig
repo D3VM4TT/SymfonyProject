@@ -1,0 +1,13 @@
+{% extends "./base.html.twig" %}
+{% block title %}
+    {{ post.title }}
+{% endblock %}
+{% block body %}
+    <h1>Title: {{ post.title|upper }}</h1>
+    <p>ID: {{ id }}</p>
+    <p>Description: {{ post.desc }}</p>
+    {% if post.date is defined %}
+        <p>date: {{ post.date|date('Y-m-d') }}</p>
+    {% endif %}
+    <h3>Price: {{ 535.332|price }}</h3>
+{% endblock %}

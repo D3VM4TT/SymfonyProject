@@ -1,0 +1,17 @@
+{% extends "./base.html.twig" %}
+{% block title %}
+    Blog List
+{% endblock %}
+{% block body %}
+    <h1>Blog List</h1>
+    <h2>{{ message }}</h2>
+    {% for id, post in posts %}
+        <p><a href="{{ path('blog_post', {'id' : id}) }}">ID: {{ id }}</a></p>
+        <p>Title: {{ post.title }}</p>
+        <p>Description: {{ post.desc }}</p>
+        {% if post.date is defined %}
+            <p>date: {{ post.date|date('Y-m-d') }}</p>
+        {% endif %}
+        <hr>
+    {% endfor %}
+{% endblock %}
